@@ -17,7 +17,7 @@ int main(void)
 
 	printf("%ld, %ld", j, k);
 
-	for (i = 2; i < 98; i++)
+	for (i = 3; i <= 98; i++)
 	{
 	next = j + k;
 	printf(", %ld", next);
