@@ -1,28 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Entry point of the program
  *
- * Return: Always 0 (Success)
+ * This program computes and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2.
+ *
+ * Return: Always 0 (success)
  */
 
 int main(void)
+
 {
-	int prev = 1, curr = 2, next;
-	long sum = 2; /* start with sum = 2, since the first even term is 2 */
+	int i;
+	long j = 1, k = 2, next;
 
-	while (curr <= 4000000)
-	{
-	next = prev + curr;
-	if (next % 2 == 0)
-	{
-	sum += next;
-	}
-	prev = curr;
-	curr = next;
-	}
+	printf("%ld, %ld", j, k);
 
-	printf("%ld\n", sum);
+	for (i = 2; i < 98; i++)
+	{
+	next = j + k;
+	printf(", %ld", next);
+	j = k;
+	k = next;
+	}
+	printf("\n");
 
 	return (0);
 }
